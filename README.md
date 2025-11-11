@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Lập Lịch Học Tự Động - React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Giới thiệu dự án
 
-## Available Scripts
+Ứng dụng web này giúp người dùng **tính toán và lập lịch học tự động** cho một khóa học.  
+Người dùng nhập các thông tin cơ bản, hệ thống sẽ tự động:
 
-In the project directory, you can run:
+- Tạo danh sách **ngày học hợp lệ**.  
+- Bỏ qua các ngày lễ cố định và kỳ nghỉ dài hạn.  
+- Xác định **ngày bế giảng** cuối cùng.  
 
-### `npm start`
+**Các thông tin cần nhập:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Ngày bắt đầu khóa học.  
+- Tổng số buổi học.  
+- Ngày học trong tuần (0 = Thứ 2 … 6 = Chủ nhật).  
+- Kỳ nghỉ dài hạn (tùy chọn).  
+- Các ngày lễ cố định được áp dụng tự động (ví dụ: 1/1, 2/3, 30/4, 1/5, 2/9).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Giao diện (UI)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Giao diện được thiết kế **thân thiện, dễ sử dụng**:
 
-### `npm run build`
+### Form nhập dữ liệu
+- **Ngày bắt đầu:** Input date.  
+- **Tổng số buổi học:** Input number.  
+- **Ngày học trong tuần:** Input text, nhập các số cách nhau bằng khoảng trắng (ví dụ: `1 3`).  
+- **Kỳ nghỉ dài hạn:** Input date cho ngày bắt đầu và ngày kết thúc (tùy chọn).  
+- **Button “Tính lịch học”** để chạy thuật toán.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Kết quả hiển thị
+- **Ngày bế giảng** cuối cùng.  
+- **Danh sách các ngày học hợp lệ**.  
+- **Danh sách các ngày trùng nghỉ** (nếu có), hiển thị màu đỏ.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Thiết kế UI
+- Input có placeholder hướng dẫn người dùng.  
+- Khoảng cách hợp lý giữa các trường.  
+- Button nổi bật, dễ thao tác.  
+- Font chữ dễ đọc, tổng thể gọn gàng, dễ theo dõi.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Cài đặt và chạy dự án
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. Clone repository
+```bash
+git clone <URL_REPO_CUA_BAN>
+cd react-schedule
+```
+### 2. Chạy dự án
+```bash
+npm install
+npm start
+```
