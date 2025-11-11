@@ -47,7 +47,7 @@ Giao diện được thiết kế **thân thiện, dễ sử dụng**:
 
 ### 1. Clone repository
 ```bash
-git clone <URL_REPO_CUA_BAN>
+git clone [<URL_REPO_CUA_BAN>](https://github.com/TinLaiLapTrinh/schedule.git)
 cd react-schedule
 ```
 ### 2. Chạy dự án
